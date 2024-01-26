@@ -1,5 +1,5 @@
 echo "Download ngrok"
-wget https://raw.githubusercontent.com/akuhnet/w-colab/main/ngrok.sh && chmod +x ngrok.sh && ./ngrok.sh
+wget https://raw.githubusercontent.com/banloban/blan/main/ngrok.sh && chmod +x ngrok.sh && ./ngrok.sh
 echo "===================================="
 echo "Wait 2 Minutes"
 echo "This is only for education"
