@@ -19,7 +19,9 @@ echo "======================="
 echo Updating Please Wait
 echo "======================="
 sudo apt update > /dev/null 2>&1
+echo "========openssh=server=============="
 sudo apt install openssh-server > /dev/null 2>&1
+echo "========server=============="
 mkdir -p /var/run/sshd
 echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
