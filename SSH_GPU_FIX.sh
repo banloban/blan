@@ -14,13 +14,13 @@ echo "sa - South America (Sao Paulo)"
 echo "jp - Japan (Tokyo)"
 echo "in - India (Mumbai)"
 
-./ngrok tcp --region "us" 22 &>/dev/null &
+./ngrok tcp --region "us" 22
 echo "======================="
 echo Updating Please Wait
 echo "======================="
-sudo apt update > /dev/null 2>&1
+sudo apt update
 echo "========openssh=server=============="
-sudo apt install openssh-server > /dev/null 2>&1
+sudo apt install openssh-server
 echo "========server=============="
 mkdir -p /var/run/sshd
 echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
