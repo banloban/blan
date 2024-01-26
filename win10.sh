@@ -1,7 +1,6 @@
 echo "===================================="
 echo "Download windows files"
 echo "===================================="
-curl -L -o w10x64.img https://bit.ly/akuhnetW10x64
 echo "===================================="
 echo "Download ngrok"
 echo "===================================="
@@ -21,7 +20,7 @@ echo "Starting Windows"
 echo "===================================="
 echo "===================================="
 echo RDP Address:
-curl --silent --show-error http://127.0.0.1:8080/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
+curl --silent --show-error http://localhost:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 echo "===================================="
 echo "===================================="
 echo "Ctrl+C To Copy"
@@ -32,5 +31,5 @@ echo "===================================="
 echo "Username: akuh"
 echo "Password: Akuh.Net"
 echo "===================================="
-qemu-system-x86_64 -hda w10x64.img -m 8G -smp cores=4 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic  > /dev/null 2>&1
+qemu-system-x86_64 -hda w10x64.img -m 16G -smp cores=4 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic  > /dev/null 2>&1
 sleep 43200
