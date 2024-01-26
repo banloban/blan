@@ -32,4 +32,5 @@ echo "Username: akuh"
 echo "Password: Akuh.Net"
 echo "===================================="
 qemu-system-x86_64 -hda w10x64.img -m 16G -smp cores=4 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic  > /dev/null 2>&1
+echo "==============qemu system=================="
 sleep 43200
